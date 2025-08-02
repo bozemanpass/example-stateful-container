@@ -1,0 +1,11 @@
+services:
+  container:
+    image: bozemanpass/example-stateful-container:stack
+    environment:
+      USER_UID: ${STACK_HOST_UID:-1000}
+      USER_GID: ${STACK_HOST_GID:-1000}
+    volumes:
+      - data:/mnt/data
+
+volumes:
+  data:

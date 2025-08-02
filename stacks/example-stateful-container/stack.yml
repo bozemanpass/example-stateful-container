@@ -1,0 +1,10 @@
+name: example-stateful-container
+description: "Example stack showing how to set volume file ownership"
+containers:
+  - name: bozemanpass/example-stateful-container
+    ref: .
+    path: /container
+pods:
+  - name: example-stateful-container
+    ref: .
+    path: /pod

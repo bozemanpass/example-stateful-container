@@ -1,0 +1,9 @@
+FROM ubuntu:24.04
+
+COPY ./run.sh /run.sh
+COPY ./change-uid.sh /change-uid.sh
+
+VOLUME [ "/mnt/data" ]
+
+SHELL ["/bin/bash", "-c"]
+CMD ["/change-uid.sh", "/run.sh"]
