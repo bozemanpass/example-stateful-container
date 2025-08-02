@@ -4,7 +4,6 @@ containers:
   - name: bozemanpass/example-stateful-container
     ref: .
     path: ./container
-    build: ./build.sh
 pods:
   - name: example-stateful-container
     ref: .
